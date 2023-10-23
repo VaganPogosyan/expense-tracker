@@ -14,11 +14,11 @@ const login = async (req, res) => {
 
   if (!getUser) throw "This email does not exits in the system";
 
-  console.log(getUser);
+  // console.log(getUser);
 
   const comparePassword = await bcrypt.compare(password, getUser.password);
-  console.log(password, getUser.password);
-  console.log(comparePassword);
+  // console.log(password, getUser.password);
+  // console.log(comparePassword);
 
   if (!comparePassword) throw "Email and password do not match";
 
